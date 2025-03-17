@@ -51,8 +51,6 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    /* --font-sans: var(--font-geist-sans); */
-    /* --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,12 +60,117 @@
     }
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    /* font-family: Arial, Helvetica, sans-serif; */
+.font-robotomono {
+    font-family: "Roboto Mono", monospace;
 }
 
 .font-b612mono {
     font-family: "B612 Mono", monospace;
+}
+
+.font-glasstty {
+    font-family: "Glass TTY VT220", monospace;
+}
+
+@layer base {
+    h1 {
+        @apply text-5xl md:text-6xl lg:text-7xl uppercase text-amber-500 font-bold pb-4;
+        font-family: "Roboto Mono", monospace;
+    }
+    h2 {
+        @apply text-3xl md:text-4xl lg:text-5xl;
+        font-family: "Glass TTY VT220", monospace;
+    }
+    h3 {
+        @apply font-bold pb-4 text-3xl;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.red-blur {
+    width: 150px;
+    height: 200px;
+    background-image: linear-gradient(#ff585890, #ff7a0090), url(/noisier.svg);
+    position: absolute;
+    left: -15%;
+    top: -10%;
+    z-index: -10;
+    filter: blur(50px);
+}
+
+.green-blur {
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(#00ff8550, #00ff47), url(/noisier.svg);
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: -10;
+    filter: blur(40px);
+}
+
+.purple-blur {
+    width: 250px;
+    height: 250px;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(242, 47, 176, 0.4) 30%,
+            rgba(112, 97, 163, 0.1) 60%,
+            rgba(245, 138, 37, 0.5) 100%
+        ),
+        url(/noisier.svg);
+    position: absolute;
+    left: 0%;
+    top: -17%;
+    z-index: -10;
+    filter: blur(200px);
+}
+
+.project-card-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-front {
+    z-index: -1;
+    height: 350px;
+    max-height: 350px;
+    background-image: url(/noise.svg);
+}
+
+.project-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    max-height: 350px;
+}
+
+.project-card-back:hover {
+    opacity: 100;
+}
+
+.project-card-btn {
+    background-image: radial-gradient(#19ce40, #c2ff61);
+
+    &:hover {
+        background-color: #fb72fe;
+        color: white;
+        background-image: radial-gradient(#9366fe, #fa55fe);
+    }
+
+    &:active {
+        background-color: #ff363a;
+        color: #180f99;
+        background-image: radial-gradient(#ff8d4680, #ff787880);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5) inset;
+    }
 }

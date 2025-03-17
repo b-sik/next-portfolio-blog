@@ -1,53 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-// const b612Mono = localFont({
-//     src: [
-//         {
-//             path: "/fonts/b612-mono/b612-mono-400-normal.ttf",
-//             weight: "400",
-//             style: "normal",
-//         },
-//         {
-//             path: "/fonts/b612-mono/b612-mono-700-normal.ttf",
-//             weight: "700",
-//             style: "normal",
-//         },
-//     ],
-// });
-//
-// const glassTTY = localFont({
-//     src: [
-//         {
-//             path: "/fonts/glass-tty-vt220/glass-tty-vt220-500-normal.woff",
-//             weight: "500",
-//             style: "normal",
-//         },
-//     ],
-// });
-//
-// const RobotoMono = localFont({
-//     src: [
-//         {
-//             path: "/fonts/roboto-mono/roboto-mono-300-normal.ttf",
-//             weight: "300",
-//             style: "normal",
-//         },
-//         {
-//             path: "/fonts/roboto-mono/roboto-mono-400-normal.ttf",
-//             weight: "400",
-//             style: "normal",
-//         },
-//         {
-//             path: "/fonts/roboto-mono/roboto-mono-700-normal.ttf",
-//             weight: "700",
-//             style: "normal",
-//         },
-//     ],
-// });
-
-// console.log(RobotoMono);
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -61,9 +13,20 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`font-b612mono antialiased`}>
-                <p>here is some writing</p>
+            <body className="font-robotomono antialiased">
+                <header className="w-full border py-16 px-6">
+                    <div className="mx-auto max-w-4xl">
+                        <h1>Brian Siklinski</h1>
+                        <h2>web developer</h2>
+                    </div>
+                </header>
                 {children}
+                <footer className="border py-16 px-6">
+                    <p className="font-glasstty mx-auto max-w-4xl text-center">
+                        © 2025 bsik.net | All Rights Reserved | Designed by
+                        Lubna Sarigat
+                    </p>
+                </footer>
             </body>
         </html>
     );
