@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ContactIcons from "./components/contact-icons";
+import Header from "./parts/header";
+import Footer from "./parts/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,50 +16,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="font-robotomono antialiased">
-                <header className="h-screen w-full">
-                    <div className="w-full h-full flex flex-col justify-between max-w-6xl mx-auto py-16 px-6">
-                        <div className="mx-auto w-full">
-                            <h1>Brian Siklinski</h1>
-                            <h2>web developer</h2>
-                        </div>
-                        <section
-                            id="about"
-                            className="py-8 ml-auto text-right max-w-2xl"
-                        >
-                            <h3>About</h3>
-                            <p>
-                                Results-driven Frontend Developer with 4+ years
-                                of experience in building responsive,
-                                high-performance websites and applications.
-                                Proficient in React, WordPress, JavaScript, PHP,
-                                CSS, and modern frontend frameworks, with a
-                                strong understanding of REST APIs, GraphQL, and
-                                full-stack development.
-                            </p>
-                        </section>
-                    </div>
-                </header>
+                <Header />
                 {children}
-                <footer className="border py-8 px-6 h-screen flex flex-col justify-evenly">
-                    <section id="contact" className="mx-auto max-w-4xl w-full">
-                        <h3 className="text-center">Contact</h3>
-                        <p className="font-glasstty text-center text-4xl my-4">
-                            b.siklinski@gmail.com
-                        </p>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 bg-violet-600 mx-auto max-w-4xl py-8">
-                            <ContactIcons />
-                        </div>
-                    </section>
-                    <div className="font-glasstty mx-auto max-w-4xl text-center pt-8">
-                        <p className="mb-2">
-                            Created with Next.js and TailwindCSS
-                        </p>
-                        <p>
-                            © 2025 bsik.net | All Rights Reserved | Designed by
-                            Lubna Sarigat
-                        </p>
-                    </div>
-                </footer>
+                <Footer />
             </body>
         </html>
     );

@@ -1,8 +1,10 @@
-type Icons = {
+type Icon = {
     label: string;
     svg: React.ReactNode;
     url: string;
-}[];
+};
+
+type Icons = Icon[];
 
 export default function ContactIcons() {
     const icons: Icons = [
@@ -65,17 +67,19 @@ export default function ContactIcons() {
 
     return (
         <>
-            {icons.map(({ label, svg, url }, i) => (
-                <div
-                    key={label}
-                    className={`icon-wrapper flex flex-col items-center ${i === 0 || i === 1 ? "mb-8 sm:mb-0" : ""}`}
-                >
-                    <a href={url}>{svg}</a>
-                    <a href={url} className="text-xl" target="_blank">
-                        {label}
-                    </a>
-                </div>
-            ))}
+            {icons.map(
+                ({ label, svg, url }: Icon, i: number): React.ReactNode => (
+                    <div
+                        key={label}
+                        className={`icon-wrapper flex flex-col items-center ${i === 0 || i === 1 ? "mb-8 sm:mb-0" : ""}`}
+                    >
+                        <a href={url}>{svg}</a>
+                        <a href={url} className="text-xl" target="_blank">
+                            {label}
+                        </a>
+                    </div>
+                )
+            )}
         </>
     );
 }
