@@ -77,12 +77,34 @@
         @apply text-5xl md:text-6xl lg:text-7xl uppercase text-amber-500 font-bold pb-4;
         font-family: "Roboto Mono", monospace;
     }
+
     h2 {
         @apply text-3xl md:text-4xl lg:text-5xl;
         font-family: "Glass TTY VT220", monospace;
     }
+
     h3 {
         @apply font-bold pb-4 text-3xl;
+    }
+
+    .icon-wrapper {
+        a {
+            @apply text-white;
+
+            svg {
+                @apply fill-white;
+            }
+        }
+    }
+
+    .icon-wrapper:hover {
+        a {
+            @apply text-lime-300;
+
+            svg {
+                @apply fill-lime-300;
+            }
+        }
     }
 }
 
