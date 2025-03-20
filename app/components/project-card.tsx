@@ -17,12 +17,9 @@ export default function ProjectCard({
     return (
         <div className="flex align-stretch flex-col relative overflow-hidden my-6">
             <div
-                className="text-black py-6 px-9 flex flex-col"
+                className="text-black py-6 px-9 flex flex-col min-h-[300px] md:max-h-[350px] bg-[url(/noise.svg)]"
                 style={{
-                    maxHeight: "350px",
-                    height: "350px",
                     zIndex: "-1",
-                    backgroundImage: "url(/noise.svg)",
                     backgroundColor: "rgb(220, 244, 163)",
                 }}
             >
@@ -39,20 +36,19 @@ export default function ProjectCard({
                     {year}
                 </p>
             </div>
+
             <div
-                className="py-6 px-9 flex flex-col justify-around opacity-0 hover:opacity-100 absolute w-full"
+                className="py-6 px-9 flex flex-col justify-around lg:opacity-0 lg:hover:opacity-100 lg:absolute w-full min-h-[300px] lg:max-h-[350px]"
                 style={{
-                    height: "350px",
-                    maxHeight: "350px",
                     backgroundColor: "rgb(49, 54, 37)",
                 }}
             >
-                <h4 className="text-2xl font-bold">{title}</h4>
-                <p className="text-lg">{description}</p>
-                <div>
+                <h4 className="text-2xl font-bold hidden lg:block">{title}</h4>
+                <p className="text-base md:text-lg">{description}</p>
+                <div className="flex flex-wrap mt-4 md:mt-0">
                     {buttons.map(({ label, url }) => (
                         <a
-                            className="project-card-btn mr-6 rounded-2xl font-b612mono font-bold px-6 py-3 text-black hover:text-white"
+                            className="project-card-btn mr-6 rounded-2xl font-b612mono font-bold px-6 py-3 text-black hover:text-white text-nowrap"
                             key={url}
                             href={url}
                             target="_blank"
