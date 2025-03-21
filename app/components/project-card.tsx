@@ -44,7 +44,7 @@ export default function ProjectCard({
                 }}
             >
                 <h4 className="text-2xl font-bold hidden lg:block">{title}</h4>
-                <p className="text-base md:text-lg">{description}</p>
+                <p className="text-base">{description}</p>
                 <div className="flex flex-wrap mt-4 md:mt-0">
                     {buttons.map(({ label, url }) => (
                         <a
