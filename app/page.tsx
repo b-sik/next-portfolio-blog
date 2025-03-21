@@ -6,8 +6,14 @@ export default function Home() {
             <section id="projects" className="py-8 mx-auto max-w-3xl">
                 <h3>Projects</h3>
                 <p>
-                    A sample of personal projects. Please see resume for
-                    professional experience.
+                    A sample of personal projects. Please see{" "}
+                    <a
+                        href="https://cdn.bsik.net/Brian%20Siklinski%20-%20Frontend%20Developer%20Resume.pdf"
+                        target="_blank"
+                    >
+                        resume
+                    </a>{" "}
+                    for professional experience.
                 </p>
 
                 <div className="max-w-3xl mx-auto">
