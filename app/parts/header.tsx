@@ -12,7 +12,7 @@ export default function Header() {
                     id="about"
                     className="py-8 ml-auto text-right max-w-2xl"
                 >
-                    <nav className="mb-4">
+                    <nav className="mb-4 text-xl">
                         <a href="#projects" className="mr-4">
                             Projects
                         </a>
