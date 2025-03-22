@@ -31,8 +31,10 @@ export default function ProjectCard({
                     <span className="absolute -mt-1">►</span>
                     <hr className="flex-grow border-0 border-t-2 border-t-black" />
                 </div>
-                <p className="uppercase ml-6 text-xl">{subtitle}</p>
-                <p className="mt-auto mb-2 font-b612mono text-4xl ml-6">
+                <p className="uppercase ml-6 text-xl mb-4 md:mb-0">
+                    {subtitle}
+                </p>
+                <p className="mt-4 sm:mt-auto mb-2 font-b612mono text-2xl sm:text-4xl ml-6">
                     {year}
                 </p>
             </div>
@@ -48,7 +50,7 @@ export default function ProjectCard({
                 <div className="flex flex-wrap mt-4 md:mt-0">
                     {buttons.map(({ label, url }) => (
                         <a
-                            className="project-card-btn mr-6 rounded-2xl font-b612mono font-bold px-6 py-3 text-black hover:text-white text-nowrap"
+                            className="project-card-btn my-2 md:my-0 mr-6 rounded-2xl font-b612mono font-bold px-6 py-3 text-black hover:text-white text-nowrap"
                             key={url}
                             href={url}
                             target="_blank"
