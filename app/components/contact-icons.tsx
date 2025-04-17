@@ -61,7 +61,7 @@ export default function ContactIcons() {
                 </svg>
             ),
 
-            url: "https://cdn.bsik.net/Brian%20Siklinski%20-%20Frontend%20Developer%20Resume.pdf",
+            url: "https://cdn.bsik.net/Brian_Siklinski-Frontend_Developer_Resume.pdf",
         },
     ];
 
