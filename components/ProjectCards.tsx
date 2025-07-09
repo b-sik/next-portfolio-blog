@@ -16,6 +16,23 @@ type Projects = Project[];
 export default function ProjectCards() {
     const projects: Projects = [
         {
+            title: 'Recipe and Events Blog',
+            subtitle: 'NextJS, TailwindCSS, WordPress, PHP',
+            year: '2025',
+            description:
+                'A work-in-progess, this project is a headless statically-generated NextJS site with WordPress as the CMS. Includes a custom plugin for backend customizations such as custom post types and a REST API for form submissions.',
+            buttons: [
+                {
+                    label: 'View Project',
+                    url: 'https://goodfoodloob.com',
+                },
+                {
+                    label: 'GitHub',
+                    url: 'https://github.com/b-sik/goodfoodloob',
+                },
+            ],
+        },
+        {
             title: 'Web Tools and Utilities',
             subtitle: 'Python, FastAPI, JavaScript, Cursor',
             year: '2025',
@@ -29,23 +46,6 @@ export default function ProjectCards() {
                 {
                     label: 'GitHub',
                     url: 'https://github.com/b-sik/web-tools-and-utilities',
-                },
-            ],
-        },
-        {
-            title: 'Recipe and Events Blog',
-            subtitle: 'WordPress, JavaScript, CSS',
-            year: '2025',
-            description:
-                'Designed by Lubna Sarigat, this was my first go at fully learning and embracing the WordPress Full Site Editor. Using the Create Block Theme plugin alongside Git versioning, this work-in-progress has a landing page rich with responsive CSS design.',
-            buttons: [
-                {
-                    label: 'View Project',
-                    url: 'https://goodfoodloob.com',
-                },
-                {
-                    label: 'GitHub',
-                    url: 'https://github.com/b-sik/goodfoodloob',
                 },
             ],
         },

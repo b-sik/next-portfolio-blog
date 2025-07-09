@@ -2,7 +2,7 @@ import ContactIcons from '@/components/ContactIcons';
 
 export default function Footer() {
     return (
-        <footer className='min-h-screen h-screen w-full bg-teal-950 bg-blend-overlay bg-[url(/img/footer.jpg)] bg-center py-8 px-6 flex flex-col justify-evenly'>
+        <footer className='min-h-screen h-screen w-full bg-teal-950 bg-blend-overlay bg-[url(/img/footer.jpg)] bg-center bg-cover py-8 px-6 flex flex-col justify-evenly'>
             <section
                 id='contact'
                 className='mx-auto max-w-2xl w-full grow flex flex-col justify-center'
